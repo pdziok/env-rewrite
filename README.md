@@ -6,7 +6,7 @@ To break direct dependency between application and it's run environment
 
 ## Example
 
-Running application or heroku and using add-ons causes adding Heroku Config Vars. 
+Running application on heroku and using add-ons causes adding Heroku Config Vars. 
 Those Vars become Environment Variables within running dyno.
 
 Heroku Vars are usually prefixed with add-on alias causing app to use
@@ -31,7 +31,7 @@ Run your app with additional Environment Variable `REWRITE_ENV`
 export REWRITE_ENV=ELASTICSEARCH_URL:FOUNDELASTICSEARCH_URL
 ```
 
-Inside your application before rewrite envs before using any of them (preferably in the begging of the entrypoint)
+Inside your application rewrite envs before using any of them (preferably in the beginning of the entrypoint)
 
 ```javascript
 require('env-rewrite').rewrite()
@@ -49,7 +49,7 @@ export REWRITE_ENV=ELASTICSEARCH_URL:FOUNDELASTICSEARCH_URL,ES_URL:FOUNDELASTICS
 
 ### Chaning
 
-Values are rewrited one after another which enables rewrite chain.
+Values are rewritten one after another which enables rewrite chain.
 
 ```shell
 export REWRITE_ENV=ELASTICSEARCH_URL:FOUNDELASTICSEARCH_URL,ES_URL:ELASTICSEARCH_URL
