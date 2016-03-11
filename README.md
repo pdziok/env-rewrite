@@ -34,7 +34,7 @@ export REWRITE_ENV=ELASTICSEARCH_URL:FOUNDELASTICSEARCH_URL
 Inside your application before rewrite envs before using any of them (preferably in the begging of the entrypoint)
 
 ```javascript
-require('env-rewrite).rewrite()
+require('env-rewrite').rewrite()
 ```
 
 Now `ELASTICSEARCH_URL` env has value of `FOUNDELASTICSEARCH_URL`;
